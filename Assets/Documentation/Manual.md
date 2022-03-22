@@ -177,7 +177,8 @@ We instantiate the ScoreManager into the scene which is useful incase in further
 wallDestroy
 ----------
 
-Description
+This behaviour allows the player to destroy gameobjects in the scene.
+
 ### Properties
 
 -   `Wall` - Gameobject to destroy
