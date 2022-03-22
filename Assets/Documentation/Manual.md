@@ -25,14 +25,20 @@ Description
 
 ### Script
 
+```
 using Cinemachine;
+```
 
+
+```
     public Transform character;
     public List<Transform> possibleCharacters;
     public int whichCharacter;
     public CinemachineVirtualCamera cam;
-    
-    
+``` 
+
+
+```    
    void Start()
     {
         if (character == null && possibleCharacters.Count >= 1)
@@ -68,8 +74,9 @@ using Cinemachine;
             Swap();
         }
     }
+```    
     
-    
+```    
     public void Swap()
     {
         character = possibleCharacters[whichCharacter];
@@ -88,6 +95,8 @@ using Cinemachine;
         cam.Follow = character;
     }
 }
+```
+
 
 Collectable
 --------
@@ -96,6 +105,7 @@ Description
 
 ### Script
 
+```
 private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player1")
@@ -110,8 +120,10 @@ private void OnTriggerEnter(Collider other)
         }
     }
 }
+```
 
-scoreManager
+
+ScoreManager
 ------------
 
 Description
@@ -123,14 +135,15 @@ Description
 
 ### Script
 
+```
 using UnityEngine.UI;
 using TMPro;
-
     public static scoreManager instance;
     public static int player1score, player2score;
     public TMP_Text player1scoreText, player2scoreText;
+```    
     
-    
+```    
     private void Awake()
     {
         instance = this;
@@ -146,6 +159,7 @@ using TMPro;
         player2scoreText.text = player2score.ToString();
     }
 }
+```
 
 wallDestroy
 ----------
@@ -156,10 +170,11 @@ Description
 -   `Wall` -
 
 ### Script
-
+```
     public GameObject wall;
     private void OnTriggerEnter(Collider other)
     {
         Destroy(wall);
     }
 }
+```
